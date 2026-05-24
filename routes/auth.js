@@ -104,6 +104,15 @@ router.post('/login', async (req, res) => {
       message: err.message
     });
   }
+const express = require("express");
+const router = express.Router();
+
+// test route
+router.get("/", (req, res) => {
+  res.json({
+    status: "success",
+    message: "Auth route working"
+  });
 });
 
 module.exports = router;

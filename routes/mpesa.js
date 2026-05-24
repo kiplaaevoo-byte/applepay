@@ -19,6 +19,11 @@ router.post('/withdraw', auth, async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+const express = require("express");
+const router = express.Router();
+
+router.get("/", (req, res) => {
+  res.json({ message: "Wallet route working" });
 });
 
 module.exports = router;
